@@ -1,0 +1,105 @@
+<div class="insert_page">
+    <div class="header_logo_div">
+
+
+        <div class="list">
+            <form #insertForm="ngForm" (ngSubmit)="submit(insertForm.value)">
+                <div class="row1">
+                    <div class="form-group projecttitle">
+                        <label>Enter Project </label>
+                        <input type="text" name="projectName" ngModel><br><br>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="form-group">
+                        <label>Reason</label>
+                        <select id="reason" name="reason" value="reason" ngModel>
+                            <option value="Business">Business</option>
+                            <option value="Dealership">Dealership</option>
+                            <option value="Transport">Transport</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Type</label>
+                        <select id="type" name="type" value="type" ngModel>
+                            <option value="Internal">Internal</option>
+                            <option value="External">External</option>
+                            <option value="Vendor">Vendor</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Division</label>
+                        <select id="division" name="division" value="division" ngModel>
+                            <option value="Comprosser">Comprosser</option>
+                            <option value="Pump">Pump</option>
+                            <option value="Filters">Filters</option>
+                            <option value="Water Heater">Water Heater</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row3">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="category" name="category" value="category" ngModel>
+                            <option value="Quality A">Quality A</option>
+                            <option value="Quality B">Quality B</option>
+                            <option value="Quality C">Quality C</option>
+                            <option value="Quality D">Quality D</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Priority</label>
+                        <select id="priority" name="priority" value="priority" ngModel>
+                            <option value="d1">High</option>
+                            <option value="d2">Low</option>
+                            <option value="d3">Medium</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Department</label>
+                        <select id="department" name="department" value="department" ngModel>
+                            <option value="Strategy">Strategy</option>
+                            <option value="Quality">Quality</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Maintaince">Maintaince</option>
+                            <option value="Stores">Stores</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row4">
+                    <div class="form-group date">
+                        <label>Start Date As Per Business Plan</label>
+                        <input class="datepicker" type="date" name="startDate" ngModel>
+                    </div>
+                    <div class="form-group date">
+                        <label>End Date As Per Business Plan</label>
+                        <input class="datepicker" type="date" name="endDate" ngModel>
+                    </div>
+                    <div class="form-group">
+                        <label>Location</label>
+                        <select id="location" name="location" value="location" ngModel>Pune
+                            <option value="Pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Delhi">Delhi</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group status">
+                    <label>Status : </label>
+                    <!-- <p>Registered</p> -->
+                    <!-- <select id="status" name="status" value="status" ngModel>
+
+                        <option value="Registered">Registered</option>
+                        <option value="Closed">Closed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select> -->
+                </div>
+                <button class="submitBtn" type="submit">Save Project</button>
+            </form>
+        </div>
+    </div>
+</div>

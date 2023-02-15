@@ -1,0 +1,114 @@
+.insert_page {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(229, 233, 233);
+}
+
+.list {
+    width: 94%;
+    height: 80vh;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* form div {
+    border: 1px solid;
+} */
+
+.row1,
+.row2,
+.row3,
+.row4 {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.row1 .projecttitle {
+    border: 2px solid rgb(62, 125, 2);
+    padding: 10px 10px;
+}
+
+
+
+.row1 {
+    text-align: center;
+    background-color: white;
+    font-weight: 600;
+    color: rgb(139, 142, 145);
+
+}
+
+.row1 .form-group {
+    border-radius: 5px;
+    height: 60px;
+    width: 40%;
+    text-align: left;
+}
+
+.row1 .form-group input {
+    border: 0;
+    outline: 0;
+    margin-left: 0px;
+}
+
+.row2,
+.row3,
+.row4 {
+
+    justify-content: flex-start;
+    margin-left: 0px;
+}
+
+.row2 .form-group,
+.row3 .form-group,
+.row4 .form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    border: 0px;
+    height: 60px;
+    width: 210px;
+}
+
+.row2 .form-group select,
+.row3 .form-group select,
+.row4 .form-group select {
+    height: 30px;
+    border: 0px;
+    background-color: rgb(226, 232, 232);
+}
+
+.datepicker {
+    margin-top: 10px;
+    border: 0;
+    outline: 0;
+}
+
+.status {
+    margin: auto;
+    /* transform: translate(27px); */
+}
+
+.submitBtn {
+    margin: auto;
+
+    height: 30px;
+    width: 150px;
+    border-radius: 20px;
+    background-color: rgb(8, 48, 168);
+    border: 0px;
+    color: white;
+    margin-top: 20px;
+}

@@ -1,0 +1,113 @@
+<div class="list_page">
+
+
+
+    <div class="top_search_sort_bar">
+        <div sty>
+            Search : <input type="text" name="searchText" [(ngModel)]="searchText">
+        </div>
+        <div>
+            <label>Sort By</label>
+            <select name="sort" value="sort" ngModel #sort>
+                <option value="projectName">projectName</option>
+                <option value="reason">reason</option>
+                <option value="type">type</option>
+                <option value="division">division</option>
+                <option value="priority">priority</option>
+                <option value="department">department</option>
+                <option value="startDate">startDate</option>
+                <option value="endDate">endDate</option>
+                <option value="location">location</option>
+            </select>
+
+            <button (click)="getData(sort.value)">Sort</button>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <div class="container">
+
+
+
+        <table>
+
+            <thead>
+
+                <th>projectName</th>
+                <th>reason</th>
+                <th>type</th>
+                <th>division</th>
+                <th>category</th>
+                <th>priority</th>
+                <th>department</th>
+                <!-- <th>startDate</th>
+                <th>endDate</th> -->
+                <th>location</th>
+                <th>status</th>
+            </thead>
+
+
+            <tbody>
+                <tr *ngFor="let prod of datasource  | filter:searchText | paginate: { itemsPerPage: 10, currentPage: page
+            , totalItems:totalLength }">
+
+                    <td>
+                        {{prod.projectName}}
+                    </td>
+                    <td>
+                        {{prod.reason}}
+                    </td>
+                    <td>
+                        {{prod.type}}
+                    </td>
+                    <td>
+                        {{prod.division}}
+                    </td>
+                    <td>
+                        {{prod.category}}
+                    </td>
+                    <td>
+                        {{prod.priority}}
+                    </td>
+                    <td>
+                        {{prod.department}}
+                    </td>
+                    <!-- <td>
+                        {{prod.startDate}}
+                    </td>
+                    <td>
+                        {{prod.endDate}}
+                    </td> -->
+                    <td>
+                        {{prod.location}}
+                    </td>
+
+                    <td>
+                        {{prod.status}}
+                    </td>
+                    <td>
+                        <button (click)="updateProjectStatus('start',prod.id)">Start</button>
+                    </td>
+                    <td>
+                        <button (click)="updateProjectStatus('close',prod.id)">Close</button>
+                    </td>
+                    <td>
+                        <button (click)="updateProjectStatus('cancel',prod.id)">Cancel</button>
+                    </td>
+
+
+
+                </tr>
+            </tbody>
+
+        </table>
+        <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
+    </div>
+</div>
