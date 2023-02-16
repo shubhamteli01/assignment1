@@ -31,7 +31,6 @@ export class ApiserviceService {
              department: res.department,
              division: res.division,
              endDate: res.endDate,
-             id: res.id,
              location: res.location,
              priority: res.priority,
              projectName: res.projectName,
@@ -40,10 +39,9 @@ export class ApiserviceService {
              status: obj.status,
              type: res.type
           }
-          // Here call delete api of JSON server
-           this.httpService.delete('http://localhost:3000/posts'+id);
           
-            this.httpService.post('http://localhost:3000/posts', ob); // adding updated object in JSON server
+          
+            this.httpService.post('http://localhost:3000/posts/'+id, ob); // adding updated object in JSON server
           console.log(res)
           alert("status updated successfully")
         },
